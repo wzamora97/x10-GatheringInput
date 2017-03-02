@@ -3,12 +3,21 @@
 <head>
 <title>Gathering Input</title>
 <meta charset="utf-8">
+<script>
+function getName(){
+var first = document.getElementById("first").value;
+var last = document.getElementById("last").value;
+var fullName = first + " " + last;
+document.getElementById("message").innerHTML = fullName;
+}
+
+</script>
 </head>
 
 <body>
-  First name: <input type="text" name="first"><br>
-  Last name: <input type="text" name="last"><br>
-<button type="button" id="last"onclick="getName();">Done</button>
+  First name: <input type="text" id="first"><br>
+  Last name: <input type="text" id="last"><br>
+<button type="button" id="doneButton" onclick="getName();">Done</button>
 <p id="message"> This is a message with the Id message.</p>
 </body>
 </html>
